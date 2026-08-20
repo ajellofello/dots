@@ -1,0 +1,23 @@
+font=FantasqueSansM Nerd Font 13
+default-timeout=3000
+ignore-timeout=1
+width=250
+height=50
+outer-margin=10
+
+text-color=#b0b0b0
+background-color=#101010
+border-color=#d9ba73
+
+padding=10
+border-size=2
+border-radius=0
+icons=0
+format=<b>%s</b>
+
+[urgency="critical"]
+default-timeout=5000
+border-color=#701516
+
+[urgency="low"]
+invisible=1

@@ -1,0 +1,55 @@
+* {
+  accent: rgba ( 217, 186, 115, 100% );
+  border: rgba ( 39, 39, 39, 100% );
+  green:  rgba ( 134, 205, 130, 100% );
+  text:   rgba ( 176, 176, 176 ,100% );
+  gray:   rgba ( 71, 71, 71, 100% );
+  blue:   rgba ( 142, 190, 236, 100 % );
+  red:    rgba ( 255, 87, 51, 100 % );
+  bg:     rgba ( 16, 16, 16, 100% );
+
+  background-color: @bg;
+}
+
+inputbar {
+  padding: 5;
+}
+
+prompt {
+  text-color: @blue;
+}
+
+entry {
+  text-color: @text;
+  cursor-color: @blue;
+  cursor-width: 4;
+}
+
+window {
+  padding: 15;
+  border: 2;
+  border-color: @border;
+  height: 30%;
+  width: 13%;
+}
+
+
+element {
+  padding: 5;
+  margin: 5;
+}
+
+element-text {
+  padding: 3px;
+  text-color: @text;
+}
+
+
+element-text.selected {
+  padding: 4px;
+  background-color: @accent;
+  width: 10;
+  text-color: @bg;
+  highlight: None;
+}
+

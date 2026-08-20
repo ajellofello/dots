@@ -1,0 +1,22 @@
+configuration {
+  modes: "drun";
+  font: "FantasqueSansM Nerd Font Regular 13";
+  show-icons: false;
+	kb-remove-to-eol: "";
+  kb-accept-entry: "Return,KP_Enter";
+	kb-row-up: "Up,Control+k";
+	kb-row-down: "Down,Control+j";
+
+  timeout {
+    action: "kb-cancel";
+    delay:  0;
+  }
+
+  filebrowser {
+    directories-first: true;
+    sorting-method:    "name";
+  }
+}
+
+@theme "fih"
+
