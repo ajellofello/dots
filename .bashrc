@@ -7,6 +7,9 @@ alias grep='grep --color=auto'
 alias vi="nvim"
 alias vim="nvim"
 
+# aliasing my configuration syncing script
+alias sync="./scripts/sync.sh"
+
 # COLORS :D
 RESET="\[\e[0m\]"
 BLACK="\[\e[0;30m\]"

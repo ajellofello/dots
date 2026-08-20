@@ -15,10 +15,11 @@ require("koda").setup({
   },
   on_highlights = function(hl, _)
     hl["@keyword.directive.bash"] = { fg = "#8ebeec" }
-    hl["@variable.bash"]          = { fg = "#d9ba73" }
+    hl["@keyword.directive.bash"] = { fg = "#8ebeec" }
+    hl["@lsp.type.macro.c"]       = { fg = "#8ebeec" }
     hl["@type.builtin"]           = { fg = "#d9ba73" }
     hl["@type"]                   = { fg = "#d9ba73" }
-    hl["@string"]                 = { fg = "#777777" }
+    hl["@string"]                 = { fg = "#d9ba73" }
   end
 })
 
