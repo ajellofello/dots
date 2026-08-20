@@ -50,7 +50,7 @@ do
     continue
   fi
 
-  cp -TR "$config" "$dest_config" 2>/dev/null
+  cp -TR "$config" "$dest_config"
   echo -e copied "$emphasis""$config""$reset" to "$emphasis""$dest_config""$reset"
 
   ((moved_configs++))
