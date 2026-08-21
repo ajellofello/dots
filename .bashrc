@@ -8,7 +8,7 @@ alias vi="nvim"
 alias vim="nvim"
 
 # aliasing my configuration syncing script
-alias sync="/home/fih/./scripts/sync.sh"
+alias sync="/home/"$(whoami)"/./scripts/sync.sh"
 
 # COLORS :D
 RESET="\[\e[0m\]"
