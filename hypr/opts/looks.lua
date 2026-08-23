@@ -12,7 +12,7 @@ hl.config({
     gaps_in  = 8,
     gaps_out = 15,
 
-    border_size = 0,
+    border_size = 1,
 
     col = {
       active_border   = palette.border_ac,

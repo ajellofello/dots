@@ -1,8 +1,8 @@
 {
   "plugins": {
-    "koda.nvim": {
-      "rev": "25a5c98ca2f6bb0b69f5e2654a78f0d7c7e0721d",
-      "src": "https://github.com/oskarnurm/koda.nvim"
+    "everforest-nvim": {
+      "rev": "a0e9edc57379e8feafc6ba207c26dbb12fc1b6d8",
+      "src": "https://github.com/neanias/everforest-nvim"
     },
     "nvim-lspconfig": {
       "rev": "bff1bd61cb1455040533201ca1edf1e84efa578f",

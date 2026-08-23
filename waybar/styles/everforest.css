@@ -1,0 +1,50 @@
+* {
+  font-family: "FantasqueSansM Nerd Font";
+  font-weight: bold;
+  font-size: 15px;
+}
+
+window#waybar {
+  background-color: #1e2326;
+  border-top: 1px solid #272e33;
+}
+
+/* Workspace */
+#workspaces button {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #d3c6aa;
+}
+
+#workspaces button.focused,
+#workspaces button.active {
+  background-color: #a7c080;
+  border: 1px solid #a7c080;
+  border-radius: 0px;
+  color: #1e2326;
+}
+
+/* Clock */
+#clock {
+  color: #d3c6aa;
+}
+
+#custom-cava {
+  color: #a7c080;
+}
+
+/* Font Color */
+#network,
+#pulseaudio,
+#bluetooth,
+#battery {
+	color: #d3c6aa;
+}
+
+#battery {
+  margin-right: 15px
+}
+
+#bluetooth {
+  font-size: 17px;
+}

@@ -17,7 +17,7 @@ hl.monitor({
 
 -- Autostart
 hl.on("hyprland.start", function () 
-  hl.exec_cmd("waybar & hyprpaper")
+  hl.exec_cmd("waybar -s ~/.config/waybar/styles/everforest.css")
   hl.exec_cmd("hypridle")
   hl.exec_cmd("systemctl --user start hyprpolitagent")
 end)

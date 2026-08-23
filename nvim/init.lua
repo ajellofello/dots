@@ -1,26 +1,29 @@
 -- PACKS
 vim.pack.add({
   "https://github.com/neovim/nvim-lspconfig",
-  "https://github.com/oskarnurm/koda.nvim",
+  "https://github.com/neanias/everforest-nvim",
   { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "main" },
 })
 
-require("koda").setup({
-  theme = {
-    dark = "dark",
-  },
-  styles = {
-    functions = { bold = false },
-    comments  = { italic = true }
-  },
-  on_highlights = function(hl, _)
-    hl["@keyword.directive.bash"] = { fg = "#8ebeec" }
-    hl["@keyword.directive.bash"] = { fg = "#8ebeec" }
-    hl["@lsp.type.macro.c"]       = { fg = "#8ebeec" }
-    hl["@type.builtin"]           = { fg = "#d9ba73" }
-    hl["@type"]                   = { fg = "#d9ba73" }
-    hl["@string"]                 = { fg = "#d9ba73" }
-  end
+require("everforest").setup({
+  background = "hard",
+  italics = false,
+  disable_italic_comments = false,
+  sign_column_background = "none",
+  float_style = "dim",
+  colours_override = function(palette)
+    palette.bg0 = palette.bg_dim
+  end,
+  on_highlights = function(hl, palette)
+    hl["@comment"] = { fg = palette.bg5, italic = true }
+    hl["@string"] = { fg = palette.yellow }
+    hl["@character"] = { fg = palette.yellow }
+    hl["@type.builtin"] = { fg = palette.blue }
+    hl["@lsp.type.class"] = { fg = palette.blue }
+    hl["@lsp.type.enum"] = { fg = palette.blue }
+    hl["@lsp.type.union"] = { fg = palette.blue }
+    hl["@keyword.modifier"] = { fg = palette.red }
+  end,
 })
 
 vim.api.nvim_create_autocmd('FileType', {
@@ -46,7 +49,7 @@ vim.o.relativenumber = true
 vim.o.termguicolors = true
 vim.o.shiftwidth = 2
 vim.o.tabstop = 2
-vim.o.expandtab = true
+vim.o.expandtab = true 
 vim.o.scrolloff = 8
 vim.o.cul = true
 vim.o.culopt = "number"
@@ -58,6 +61,8 @@ vim.o.swapfile = false
 vim.o.signcolumn = "yes"
 vim.o.cot = "fuzzy,menu"
 vim.o.timeoutlen = 200
+vim.o.list = true
+vim.o.listchars = "tab:» ,lead:.,trail:." 
 vim.diagnostic.config({
   float = true,
   severity_sort = false,
@@ -69,8 +74,7 @@ vim.diagnostic.config({
 })
 vim.g.c_syntax_for_h = true
 
-vim.cmd([[ colorscheme koda ]])
-
+vim.cmd([[ colorscheme everforest ]])
 vim.cmd([[
   set guicursor=n-v-c:block,i-ci-ve-r-cr-o:hor50
 ]])

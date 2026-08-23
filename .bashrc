@@ -26,11 +26,11 @@ function prompt_command {
 	RET=$?
 
 	if [[ "$RET" == 0 ]];then
-		BRANCH="$BLUE($(git branch --show-current))$RESET "
+		BRANCH="$RED($(git branch --show-current))$RESET "
 	else
 		BRANCH=""
 	fi
-	export PS1="$BRANCH$WHITE\u$RESET $YELLOW\w$RESET $WHITE\$$RESET "
+	export PS1="$BRANCH$GREEN\u@\h$RESET:$BLUE\w$RESET\$ "
 }
 export PROMPT_COMMAND=prompt_command
 

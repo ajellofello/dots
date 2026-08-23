@@ -5,16 +5,16 @@
 -- ██║     ██║  ██║███████╗███████╗   ██║      ██║   ███████╗
 -- ╚═╝     ╚═╝  ╚═╝╚══════╝╚══════╝   ╚═╝      ╚═╝   ╚══════╝
 
-koda = {
+local koda = {
   border_ac = "rgba(39, 39, 39, 1)",
   border_ic = "rgba(39, 39, 39, 1)",
-  yellow    = "rgba(217, 186, 115, 1)",
-  white     = "rgba(255, 255, 255, 1)",
-  green     = "rgba(134, 205, 130, 1)",
-  blue      = "rgba(142, 190, 236, 1)",
-  gray      = "rgba(176, 176, 176 ,1)",
-  red       = "rgba(255, 87, 51, 1)",
   bg        = "rgba(16, 16, 16, 1)",
 }
 
-return koda
+local everforest_hard = {
+  border_ac = "rgba(39, 46, 51, 1)",
+  border_ic = "rgba(39, 46, 51, 1)",
+  bg        = "rgba(30, 35, 38, 1)",
+}
+
+return everforest_hard

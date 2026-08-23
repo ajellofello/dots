@@ -10,6 +10,7 @@ local launcher    = "rofi -show drun -display-drun 'RUN '"
 local colorpicker = "hyprpicker -a -u 60"
 local lockscreen  = "hyprlock"
 local screenshot  = "slurp | grim -g - - | tee ~/Pictures/Screenshots/$(date +%s).png > /dev/null"
+local statusbar   = "waybar -s ~/.config/waybar/styles/everforest.css"
 
 local mainMod = "SUPER"
 
@@ -26,7 +27,7 @@ hl.bind(mainMod .. " + SHIFT + P", hl.dsp.exec_cmd("poweroff"))
 hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd("reboot"))
 
 -- Reload waybar
-hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("killall waybar && waybar"))
+hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("killall waybar && " .. statusbar))
 
 -- WINDOWS
 hl.bind(mainMod .. " + C",     hl.dsp.window.close()) -- close a window

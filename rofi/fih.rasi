@@ -1,12 +1,15 @@
 * {
-  accent: rgba ( 217, 186, 115, 100% );
-  border: rgba ( 39, 39, 39, 100% );
-  green:  rgba ( 134, 205, 130, 100% );
-  text:   rgba ( 176, 176, 176 ,100% );
-  gray:   rgba ( 71, 71, 71, 100% );
-  blue:   rgba ( 142, 190, 236, 100 % );
-  red:    rgba ( 255, 87, 51, 100 % );
-  bg:     rgba ( 16, 16, 16, 100% );
+  display-drun: rgba ( 127, 187, 179, 100 % );
+  accent:       rgba ( 167, 192, 128, 100% );
+  border:       rgba ( 39, 46, 51, 100% );
+  text:         rgba ( 211, 198, 170 ,100% );
+  bg:           rgba ( 30, 35, 38, 100% );
+
+  koda-display-drun: rgba ( 142, 190, 236, 100 % );
+  koda-accent:       rgba ( 217, 186, 115, 100% );
+  koda-border:       rgba ( 39, 39, 39, 100% );
+  koda-text:         rgba ( 176, 176, 176 ,100% );
+  koda-bg:           rgba ( 16, 16, 16, 100% );
 
   background-color: @bg;
 }
@@ -16,12 +19,12 @@ inputbar {
 }
 
 prompt {
-  text-color: @blue;
+  text-color: @display-drun;
 }
 
 entry {
   text-color: @text;
-  cursor-color: @blue;
+  cursor-color: @display-drun;
   cursor-width: 4;
 }
 
