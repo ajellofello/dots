@@ -2,7 +2,7 @@
   display-drun: rgba ( 127, 187, 179, 100 % );
   accent:       rgba ( 167, 192, 128, 100% );
   border:       rgba ( 39, 46, 51, 100% );
-  text:         rgba ( 211, 198, 170 ,100% );
+  text:         rgba ( 211, 198, 170, 100% );
   bg:           rgba ( 30, 35, 38, 100% );
 
   koda-display-drun: rgba ( 142, 190, 236, 100 % );
