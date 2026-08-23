@@ -22,7 +22,6 @@ require("everforest").setup({
     hl.Pmenu = { bg = palette.bg0 }
     hl.PmenuSel = { bg = palette.green, fg = palette.bg0 }
     hl.ModeMsg = { fg = palette.yellow }
-    hl["@comment"] = { fg = palette.bg5, italic = true }
     hl["@string"] = { fg = palette.yellow }
     hl["@character"] = { fg = palette.yellow }
     hl["@type.builtin"] = { fg = palette.blue }
