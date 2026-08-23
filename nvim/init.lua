@@ -12,9 +12,15 @@ require("everforest").setup({
   sign_column_background = "none",
   float_style = "dim",
   colours_override = function(palette)
+    -- swap bg0 with bg_dim
     palette.bg0 = palette.bg_dim
+    palette.bg_dim = "#272e33"
   end,
   on_highlights = function(hl, palette)
+    hl.FloatBorder = { fg = palette.bg_dim }
+    hl.NormalFloat = { bg = palette.bg0 }
+    hl.Pmenu = { bg = palette.bg0 }
+    hl.PmenuSel = { bg = palette.blue, fg = palette.bg0 }
     hl["@comment"] = { fg = palette.bg5, italic = true }
     hl["@string"] = { fg = palette.yellow }
     hl["@character"] = { fg = palette.yellow }
