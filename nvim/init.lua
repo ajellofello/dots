@@ -20,7 +20,8 @@ require("everforest").setup({
     hl.FloatBorder = { fg = palette.bg_dim }
     hl.NormalFloat = { bg = palette.bg0 }
     hl.Pmenu = { bg = palette.bg0 }
-    hl.PmenuSel = { bg = palette.blue, fg = palette.bg0 }
+    hl.PmenuSel = { bg = palette.green, fg = palette.bg0 }
+    hl.ModeMsg = { fg = palette.yellow }
     hl["@comment"] = { fg = palette.bg5, italic = true }
     hl["@string"] = { fg = palette.yellow }
     hl["@character"] = { fg = palette.yellow }
@@ -95,8 +96,8 @@ vim.keymap.set('n', '<leader>dp', vim.diagnostic.goto_prev)
 
 vim.keymap.set('n', '<leader>ff', ":e <Insert>") -- open a file
 vim.keymap.set('n', '<leader>r', function() -- refresh configuration
-  vim.cmd([[ :w ]])
-  vim.cmd([[ :source ]])
-  vim.cmd([[ :restart ]])
+  vim.cmd([[ w ]])
+  vim.cmd([[ source ]])
+  vim.cmd([[ restart ]])
 end)
 
