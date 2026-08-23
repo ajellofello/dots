@@ -9,14 +9,14 @@
 			"left": 1,
 		},
 		"color": {
-			"1": "blue",
-			"2": "blue",
+			"1": "red",
+			"2": "red",
 		},
 	},
 	"display": {
 		"separator": "",
 		"color": {
-			"keys": "yellow",
+			"keys": "red",
 		},
 		"key": {
 			"width": 9, // Aligns keys to this width
