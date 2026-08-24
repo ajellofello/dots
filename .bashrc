@@ -7,7 +7,7 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 # setting nvim aliases
 alias vi="nvim"
-alias vim="nvim"
+#alias vim="nvim"
 
 # aliasing my configuration syncing script
 alias sync="/home/"$(whoami)"/./scripts/sync.sh"
