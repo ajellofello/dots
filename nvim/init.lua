@@ -6,7 +6,7 @@ vim.pack.add({
 require("everforest").setup({
   background = "hard",
   italics = false,
-  disable_italic_comments = false,
+  disable_italic_comments = true,
   sign_column_background = "none",
   float_style = "dim",
   colours_override = function(palette)
@@ -64,7 +64,7 @@ vim.o.swapfile = false
 vim.o.signcolumn = "no"
 vim.o.timeoutlen = 200
 vim.o.list = true
-vim.o.listchars = "tab:» ,lead:.,trail:." 
+vim.o.listchars = "tab:» ,space:.,lead:.,trail:."
 vim.o.shm = "I"
 vim.o.wrap = false
 vim.diagnostic.config({
