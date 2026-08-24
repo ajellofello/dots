@@ -3,7 +3,6 @@ vim.pack.add({
   "https://github.com/neanias/everforest-nvim",
   { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "main" },
 })
-
 require("everforest").setup({
   background = "hard",
   italics = false,
@@ -19,7 +18,6 @@ require("everforest").setup({
     hl.FloatBorder = { fg = palette.bg_dim }
     hl.NormalFloat = { bg = palette.bg0 }
     hl.ModeMsg = { fg = palette.blue }
-    hl.CursorLineNr = { fg = palette.blue }
     hl["@keyword.conditional.ternary"] = { fg = palette.orange }
     hl["@string"] = { fg = palette.yellow }
     hl["@character"] = { fg = palette.yellow }
@@ -67,6 +65,8 @@ vim.o.signcolumn = "no"
 vim.o.timeoutlen = 200
 vim.o.list = true
 vim.o.listchars = "tab:» ,lead:.,trail:." 
+vim.o.shm = "I"
+vim.o.wrap = false
 vim.diagnostic.config({
   float = true,
   severity_sort = false,
