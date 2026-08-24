@@ -1,6 +1,5 @@
 -- PACKS
 vim.pack.add({
-  "https://github.com/neovim/nvim-lspconfig",
   "https://github.com/neanias/everforest-nvim",
   { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "main" },
 })
@@ -25,6 +24,7 @@ require("everforest").setup({
     hl["@string"] = { fg = palette.yellow }
     hl["@character"] = { fg = palette.yellow }
     hl["@type.builtin"] = { fg = palette.blue }
+    hl["@type"] = { fg = palette.blue }
     hl["@lsp.type.class"] = { fg = palette.blue }
     hl["@lsp.type.enum"] = { fg = palette.blue }
     hl["@lsp.type.union"] = { fg = palette.blue }
@@ -47,7 +47,6 @@ vim.api.nvim_create_autocmd('FileType', {
     vim.treesitter.start()
   end,
 })
-vim.lsp.enable({ "lua_ls", "clangd" })
 
 -- OPTIONS
 vim.o.number = true
@@ -64,7 +63,7 @@ vim.o.clipboard = "unnamedplus"
 vim.o.background = "dark"
 vim.o.laststatus = 0
 vim.o.swapfile = false
-vim.o.signcolumn = "yes"
+vim.o.signcolumn = "no"
 vim.o.cot = "fuzzy,menu"
 vim.o.timeoutlen = 200
 vim.o.list = true
