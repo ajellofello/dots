@@ -1,5 +1,5 @@
 * {
-  font-family: "FantasqueSansM Nerd Font";
+  font-family: "Agave Nerd Font";
   font-weight: bold;
   font-size: 15px;
 }
@@ -41,10 +41,11 @@ window#waybar {
 	color: #d3c6aa;
 }
 
+#bluetooth {
+  font-size: 17px;
+}
+
 #battery {
   margin-right: 15px
 }
 
-#bluetooth {
-  font-size: 17px;
-}

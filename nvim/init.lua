@@ -19,6 +19,7 @@ require("everforest").setup({
     hl.NormalFloat = { bg = palette.bg0 }
     hl.ModeMsg = { fg = palette.blue }
     hl["@keyword.conditional.ternary"] = { fg = palette.orange }
+    hl["@constant"] = { fg = palette.purple }
     hl["@string"] = { fg = palette.yellow }
     hl["@character"] = { fg = palette.yellow }
     hl["@type.builtin"] = { fg = palette.blue }
@@ -80,7 +81,7 @@ vim.g.c_syntax_for_h = true
 
 vim.cmd([[ colorscheme everforest ]])
 vim.cmd([[
-  set guicursor=n-v-c:block,i-ci-ve-r-cr-o:hor50
+  set guicursor=n-i-v-c:block,ci-ve-r-cr-o:hor50
 ]])
 
 -- BINDS
