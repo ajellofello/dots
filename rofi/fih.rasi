@@ -39,7 +39,7 @@ window {
 
 element {
   padding: 5;
-  margin: 2;
+  margin: 4;
 }
 
 element-text {

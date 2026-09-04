@@ -12,7 +12,7 @@
 # border-color: #d9ba73
 # border-color-critical: #701516
 
-font=Iosevka Nerd Font 13
+font=Agave Nerd Font 13
 default-timeout=3000
 ignore-timeout=1
 width=250

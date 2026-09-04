@@ -1,6 +1,6 @@
 configuration {
   modes: "drun";
-  font: "Iosevka Nerd Font SemiBold 13";
+  font: "Agave Nerd Font SemiBold 13";
   show-icons: false;
 	kb-remove-to-eol: "";
   kb-accept-entry: "Return,KP_Enter";
