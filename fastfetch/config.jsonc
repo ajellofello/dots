@@ -1,11 +1,12 @@
 {
 	"$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
 	"logo": {
-		"type": "auto",
+    "type": "file",
+		"source": "~/.config/fastfetch/ascii-art/sonic.txt",
 		"position": "left",
 		"padding": {
 			"right": 3,
-      "top": 1,
+      "top": 0,
 			"left": 1,
 		},
 		"color": {
