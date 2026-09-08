@@ -1,7 +1,22 @@
 -- PACKS
+local gh = function(path) return "https://github.com/" .. path end
+
+vim.api.nvim_create_user_command("Packdel",  function(opts) vim.pack.del(opts.fargs) end,                 { nargs = "+" }) -- Deletes given packages
+vim.api.nvim_create_user_command("Packup",   function(opts) vim.pack.update(opts.fargs) end,              { nargs = "*" }) -- Updates given packages if none are given all will be updated
+vim.api.nvim_create_user_command("Packls",   function(opts) vim.pack.update(nil, { offline = true }) end, { nargs = 0   }) -- Lists all installed packages
+vim.api.nvim_create_user_command("Packinst", 
+  function(opts) 
+    local fullpaths = {}
+    for _, path in ipairs(opts.fargs) do
+      table.insert(fullpaths, gh(path))
+    end
+    vim.pack.add(fullpaths)
+  end,
+  { nargs = "+" }) -- Installs the given packages
+
 vim.pack.add({
-  "https://github.com/neanias/everforest-nvim",
-  { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "main" },
+  gh("neanias/everforest-nvim"),
+  { src = gh("nvim-treesitter/nvim-treesitter"), version = "main" },
 })
 
 require("everforest").setup({
