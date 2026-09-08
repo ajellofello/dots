@@ -1,6 +1,4 @@
-#!/bin/bash
-
-user=$(whoami)
+#!/bin/sh
 
 emphasis="\e[0;33m"
 success="\e[0;34m"
@@ -8,7 +6,7 @@ reset="\e[0m"
 fail="\e[0;31m"
 
 get_dest() {
-  default_dest="/home/"$user"/dots"
+  default_dest="/home/"$(whoami)"/dots"
 
   if [ "$1" ]; then
     echo "$1"
@@ -25,16 +23,16 @@ create it or change the dest directory" 1>&2
 fi
 
 configs=(
-  "/home/"$user"/.config/kitty" 
-  "/home/"$user"/.config/rofi" 
-  "/home/"$user"/.config/waybar" 
-  "/home/"$user"/.config/mako" 
-  "/home/"$user"/.config/hypr" 
-  "/home/"$user"/.config/nvim" 
-  "/home/"$user"/.config/fastfetch" 
-  "/home/"$user"/.config/spicetify" 
-  "/home/"$user"/.bashrc" 
-  "/home/"$user"/walls" 
+  "/home/"$(whoami)"/.config/kitty" 
+  "/home/"$(whoami)"/.config/rofi" 
+  "/home/"$(whoami)"/.config/waybar" 
+  "/home/"$(whoami)"/.config/mako" 
+  "/home/"$(whoami)"/.config/hypr" 
+  "/home/"$(whoami)"/.config/nvim" 
+  "/home/"$(whoami)"/.config/fastfetch" 
+  "/home/"$(whoami)"/.config/spicetify" 
+  "/home/"$(whoami)"/.bashrc" 
+  "/home/"$(whoami)"/walls" 
 )
 config_len=${#configs[@]}
 moved_configs=0
