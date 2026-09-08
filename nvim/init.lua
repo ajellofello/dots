@@ -1,10 +1,19 @@
 -- PACKS
 local gh = function(path) return "https://github.com/" .. path end
 
-vim.api.nvim_create_user_command("Packdel",  function(opts) vim.pack.del(opts.fargs) end,                 { nargs = "+" }) -- Deletes given packages
-vim.api.nvim_create_user_command("Packup",   function(opts) vim.pack.update(opts.fargs) end,              { nargs = "*" }) -- Updates given packages if none are given all will be updated
 vim.api.nvim_create_user_command("Packls",   function(opts) vim.pack.update(nil, { offline = true }) end, { nargs = 0   }) -- Lists all installed packages
-vim.api.nvim_create_user_command("Packinst", 
+vim.api.nvim_create_user_command("Packdel",  function(opts) vim.pack.del(opts.fargs) end,                 { nargs = "+" }) -- Deletes given packages
+vim.api.nvim_create_user_command("Packup", -- Updates given packages if none are given all will be updated
+  function(opts)
+    if opts.fargs[1] == nil then
+      opts.fargs = nil
+    end
+
+    vim.pack.update(opts.fargs)
+  end,
+  { nargs = "*" })
+
+vim.api.nvim_create_user_command("Packadd", -- Installs the given packages
   function(opts) 
     local fullpaths = {}
     for _, path in ipairs(opts.fargs) do
@@ -12,7 +21,7 @@ vim.api.nvim_create_user_command("Packinst",
     end
     vim.pack.add(fullpaths)
   end,
-  { nargs = "+" }) -- Installs the given packages
+  { nargs = "+" })
 
 vim.pack.add({
   gh("neanias/everforest-nvim"),
@@ -79,32 +88,22 @@ vim.o.clipboard = "unnamedplus"
 vim.o.background = "dark"
 vim.o.laststatus = 0
 vim.o.swapfile = false
-vim.o.signcolumn = "no"
 vim.o.timeoutlen = 200
 vim.o.list = true
 vim.o.listchars = "tab:» ,space:.,lead:.,trail:."
 vim.o.shm = "I"
 vim.o.wrap = false
-vim.diagnostic.config({
-  float = true,
-  severity_sort = false,
-  signs = true,
-  status = false,
-  underline = false,
-  virtual_text = false,
-  virtual_lines = false,
-})
 vim.g.c_syntax_for_h = true
 
 vim.cmd([[ colorscheme everforest ]])
 
 -- BINDS
 vim.g.mapleader = " "
-vim.keymap.set('n', '<leader>d',  vim.diagnostic.open_float) -- check diagsnotic
 
- -- move to next/previous diagnostic 
-vim.keymap.set('n', '<leader>dn', vim.diagnostic.goto_next)
-vim.keymap.set('n', '<leader>dp', vim.diagnostic.goto_prev)
+vim.keymap.set('n', '<leader>pl', "<CMD>:Packls<CR>")
+vim.keymap.set('n', '<leader>pu', "<CMD>:Packup<CR>")
+vim.keymap.set('n', '<leader>pd', ":Packdel <Insert>")
+vim.keymap.set('n', '<leader>pa', ":Packadd <Insert>")
 
 vim.keymap.set('n', '<leader>ff', ":e <Insert>") -- open a file
 vim.keymap.set('n', '<leader>r', function() -- refresh configuration
