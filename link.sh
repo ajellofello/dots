@@ -31,6 +31,10 @@ do
     dst="$HOME/.config/$config"
   fi
 
+  if [ -d $dst ]; then
+    rm -rf $dst
+  fi
+
   echo -e "$emphasis$src$reset -> $emphasis$dst$reset"
   ln -sf $src $dst
   ((linked_configs++))
