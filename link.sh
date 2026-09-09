@@ -4,12 +4,30 @@
 # directory to their respective place either $HOME/<path> or
 # $HOME/.config/<path>
 
-dots="$HOME/dots"
-linked_configs=0
-
 emphasis="\e[0;33m"
 success="\e[0;34m"
 reset="\e[0m"
+
+dots="$HOME/dots"
+linked_configs=0
+
+configs=$(ls -a)
+configs_to_link=0
+
+for config in ${configs[@]}
+do
+  if [ $config = "." ] || [ $config = ".." ] || [ $config = ".git" ] || [ $config = "link.sh" ]; then
+    continue
+  fi
+
+  ((configs_to_link++))
+done
+
+
+if [ ! -d $dots ]; then
+  echo $dots doesn\'t exist. PLS clone the repo or smt 1>&2
+  exit 1
+fi
 
 link_config() {
   local src=$1
@@ -19,22 +37,6 @@ link_config() {
   ln -s $src $dst
   ((linked_configs++))
 }
-
-if [ ! -d $dots ]; then
-  echo $dots doesn\'t exist. PLS clone the repo or smt 1>&2
-  exit 1
-fi
-
-configs=$(ls -a)
-configs_to_link=0
-for config in ${configs[@]}
-do
-  if [ $config = "." ] || [ $config = ".." ] || [ $config = ".git" ] || [ $config = "link.sh" ]; then
-    continue
-  fi
-
-  ((configs_to_link++))
-done
 
 echo -e Going to link $emphasis$configs_to_link$reset
 echo
