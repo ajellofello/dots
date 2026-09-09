@@ -9,37 +9,13 @@ success="\e[0;34m"
 reset="\e[0m"
 
 dots="$HOME/dots"
-linked_configs=0
-
 configs=$(ls -a)
-configs_to_link=0
-
-for config in ${configs[@]}
-do
-  if [ $config = "." ] || [ $config = ".." ] || [ $config = ".git" ] || [ $config = "link.sh" ]; then
-    continue
-  fi
-
-  ((configs_to_link++))
-done
-
+linked_configs=0
 
 if [ ! -d $dots ]; then
   echo $dots doesn\'t exist. PLS clone the repo or smt 1>&2
   exit 1
 fi
-
-link_config() {
-  local src=$1
-  local dst=$2
-
-  echo -e "$emphasis$src$reset -> $emphasis$dst$reset"
-  ln -s $src $dst
-  ((linked_configs++))
-}
-
-echo -e Going to link $emphasis$configs_to_link$reset
-echo
 
 for config in ${configs[@]}
 do
@@ -55,15 +31,13 @@ do
     dst="$HOME/.config/$config"
   fi
 
-  if [ -d $dst ] || [ -f $dst ]; then
-    rm -rf $dst
-  fi
-
-  link_config $src $dst
+  echo -e "$emphasis$src$reset -> $emphasis$dst$reset"
+  ln -sf $src $dst
+  ((linked_configs++))
 done
 
 echo
-echo -e Linked $emphasis$linked_configs$reset out of $emphasis$configs_to_link$reset
+echo -e Linked $emphasis$linked_configs$reset configs
 echo -e ""$success"
  ____   ___  _   _ _____
 |  _ \ / _ \| \ | | ____|

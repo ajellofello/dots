@@ -43,6 +43,10 @@ require("everforest").setup({
     hl.FloatBorder = { fg = palette.bg_dim }
     hl.NormalFloat = { bg = palette.bg0 }
     hl.ModeMsg = { fg = palette.blue }
+    hl.makeTarget = { fg = palette.red }
+    hl.makeSpecTarget = { fg = palette.blue }
+    hl.makeCommands = { fg = palette.green }
+    hl.makeIdent = { fg = palette.purple }
     hl["@keyword.conditional.ternary"] = { fg = palette.orange }
     hl["@constant"] = { fg = palette.purple }
     hl["@string"] = { fg = palette.yellow }
