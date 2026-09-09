@@ -5,7 +5,7 @@ vim.api.nvim_create_user_command("Packls",   function(opts) vim.pack.update(nil,
 vim.api.nvim_create_user_command("Packdel",  function(opts) vim.pack.del(opts.fargs) end,                 { nargs = "+" }) -- Deletes given packages
 vim.api.nvim_create_user_command("Packup", -- Updates given packages if none are given all will be updated
   function(opts)
-    if opts.fargs[1] == nil then
+    if #(opts.fargs) == 0 then
       opts.fargs = nil
     end
 
@@ -101,9 +101,10 @@ vim.cmd([[ colorscheme everforest ]])
 vim.g.mapleader = " "
 
 vim.keymap.set('n', '<leader>pl', "<CMD>:Packls<CR>")
-vim.keymap.set('n', '<leader>pu', "<CMD>:Packup<CR>")
+vim.keymap.set('n', '<leader>pu', ":Packup <Insert>")
 vim.keymap.set('n', '<leader>pd', ":Packdel <Insert>")
 vim.keymap.set('n', '<leader>pa', ":Packadd <Insert>")
+vim.keymap.set('n', '<leader>pua', "<CMD>:Packup<CR>")
 
 vim.keymap.set('n', '<leader>ff', ":e <Insert>") -- open a file
 vim.keymap.set('n', '<leader>r', function() -- refresh configuration
