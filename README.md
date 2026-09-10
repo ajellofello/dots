@@ -9,7 +9,7 @@ extend, with your own colorschemes for example, but that was made
 for me as I didn't originally plan on making this repo public, but
 I changed my mind.
 
-Basically do as you wish! My dots are yours!
+**Basically do as you wish! My dots are yours!**
 
 # LINKS
 
