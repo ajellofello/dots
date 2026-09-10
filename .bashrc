@@ -1,6 +1,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# I want the funny cow!!!!
 cowsay -t $(uptime -p)
 
 alias ls='ls --color=auto'
@@ -21,14 +22,22 @@ cyan="\[\e[0;36m\]"
 white="\[\e[0;37m\]"
 
 prompt_command() {
-  git branch --show-current &> /dev/null
-
-  if [[ "$?" == 0 ]];then
-    branch="$red($(git branch --show-current))$reset "
+  # set command status
+  if [ "$?" == 0 ]; then
+    cmdstat="$white&$reset"
   else
-    branch=""
+    cmdstat="$red&$reset"
   fi
-  export PS1="$branch$green\u@\h$reset:$blue\w$reset\$ "
+
+  # get git branch
+  branch=$(git branch --show-current 2> /dev/null)
+
+  if [ "$branch" != "" ]; then
+    branch="$red$branch$reset "
+  fi
+
+  # set shell
+  export PS1="$cmdstat $branch{ $blue\W$reset } "
 }
 
 export PROMPT_COMMAND=prompt_command
