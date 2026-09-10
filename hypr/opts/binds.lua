@@ -10,7 +10,7 @@ local launcher    = "rofi -show drun -display-drun 'RUN '"
 local colorpicker = "hyprpicker -a -u 60"
 local lockscreen  = "hyprlock"
 local screenshot  = "slurp | grim -g - - | tee ~/Pictures/Screenshots/$(date +%s).png > /dev/null"
-local statusbar   = "waybar -s ~/.config/waybar/styles/everforest.css"
+local statusbar   = "waybar -s ~/.config/waybar/styles/vague.css"
 
 local mainMod = "SUPER"
 
