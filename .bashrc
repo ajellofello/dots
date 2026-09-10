@@ -9,9 +9,6 @@ alias grep='grep --color=auto'
 alias vi="nvim"
 alias vim="nvim"
 
-# aliasing my configuration syncing script
-alias sync="/home/"$(whoami)"/./scripts/sync.sh"
-
 # COLORS :D
 reset="\[\e[0m\]"
 black="\[\e[0;30m\]"
@@ -31,11 +28,9 @@ prompt_command() {
   else
     branch=""
   fi
-    export PS1="$branch$green\u@\h$reset:$blue\w$reset\$ "
+  export PS1="$branch$green\u@\h$reset:$blue\w$reset\$ "
 }
+
 export PROMPT_COMMAND=prompt_command
-
-export PATH=$HOME/.local/bin:$PATH
-
 export PATH=$PATH:/home/fih/.spicetify
 

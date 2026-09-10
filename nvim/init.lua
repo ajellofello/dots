@@ -1,29 +1,8 @@
 -- PACKS
 local gh = function(path) return "https://github.com/" .. path end
 
-vim.api.nvim_create_user_command("Packls",   function(opts) vim.pack.update(nil, { offline = true }) end, { nargs = 0   }) -- Lists all installed packages
-vim.api.nvim_create_user_command("Packdel",  function(opts) vim.pack.del(opts.fargs) end,                 { nargs = "+" }) -- Deletes given packages
-vim.api.nvim_create_user_command("Packup", -- Updates given packages if none are given all will be updated
-  function(opts)
-    if #(opts.fargs) == 0 then
-      opts.fargs = nil
-    end
-
-    vim.pack.update(opts.fargs)
-  end,
-  { nargs = "*" })
-
-vim.api.nvim_create_user_command("Packadd", -- Installs the given packages
-  function(opts) 
-    local fullpaths = {}
-    for _, path in ipairs(opts.fargs) do
-      table.insert(fullpaths, gh(path))
-    end
-    vim.pack.add(fullpaths)
-  end,
-  { nargs = "+" })
-
 vim.pack.add({
+  gh("vague-theme/vague.nvim"),
   gh("neanias/everforest-nvim"),
   { src = gh("nvim-treesitter/nvim-treesitter"), version = "main" },
 })
@@ -45,8 +24,9 @@ require("everforest").setup({
     hl.ModeMsg = { fg = palette.blue }
     hl.makeTarget = { fg = palette.red }
     hl.makeSpecTarget = { fg = palette.blue }
-    hl.makeCommands = { fg = palette.green }
+    hl.makeCommands = { fg = palette.yellow }
     hl.makeIdent = { fg = palette.purple }
+    hl["@string.escape"] = { fg = palette.purple }
     hl["@keyword.conditional.ternary"] = { fg = palette.orange }
     hl["@constant"] = { fg = palette.purple }
     hl["@string"] = { fg = palette.yellow }
@@ -99,7 +79,10 @@ vim.o.shm = "I"
 vim.o.wrap = false
 vim.g.c_syntax_for_h = true
 
-vim.cmd([[ colorscheme everforest ]])
+vim.cmd([[ colorscheme vague ]])
+vim.cmd([[
+  set guicursor=n-v-c-i-r-cr:block,ci-ve:ver25,o:hor50
+]])
 
 -- BINDS
 vim.g.mapleader = " "
@@ -116,4 +99,28 @@ vim.keymap.set('n', '<leader>r', function() -- refresh configuration
   vim.cmd([[ source ]])
   vim.cmd([[ restart ]])
 end)
+
+-- CUSTOM COMMANDS
+vim.api.nvim_create_user_command("Packls",   function(opts) vim.pack.update(nil, { offline = true }) end, { nargs = 0   }) -- Lists all installed packages
+vim.api.nvim_create_user_command("Packdel",  function(opts) vim.pack.del(opts.fargs) end,                 { nargs = "+" }) -- Deletes given packages
+vim.api.nvim_create_user_command("Packup", -- Updates given packages if none are given all will be updated
+  function(opts)
+    if #(opts.fargs) == 0 then
+      opts.fargs = nil
+    end
+
+    vim.pack.update(opts.fargs)
+  end,
+  { nargs = "*" })
+
+vim.api.nvim_create_user_command("Packadd", -- Installs the given packages
+  function(opts) 
+    local fullpaths = {}
+    for _, path in ipairs(opts.fargs) do
+      table.insert(fullpaths, gh(path))
+    end
+    vim.pack.add(fullpaths)
+  end,
+  { nargs = "+" })
+
 

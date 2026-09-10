@@ -47,7 +47,7 @@
 		"format-charging": " ",
 		"states": {
 			"warning": 20,
-			"critical": 5,
+			"critical": 10,
 		},
 		"events": {
 			"on-discharging-warning": "notify-send --app-name Battery -u normal 'Low Battery'",
