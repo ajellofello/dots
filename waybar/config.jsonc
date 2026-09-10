@@ -2,7 +2,7 @@
   "height": 34,
 	"spacing": 30,
   "position": "bottom",
-	"modules-center": [ "clock" ],
+	"modules-center": ["clock"],
 	"modules-left": ["hyprland/workspaces", "sway/workspaces", "custom/cava"],
 	"modules-right": ["pulseaudio", "bluetooth", "network", "battery"],
   "custom/cava": {
