@@ -11,17 +11,21 @@ I changed my mind.
 
 Basically do as you wish! My dots are yours!
 
-# COLORSCHEMES
+# LINKS
 
-This section has the links for the colorschemes I am using in my
-configs.
+This section has the links for different things in this repo that _I
+did not make_ 
 
-I didn't make any of these themes, I just ported them to the programs
-that didn't have them ported
+**COLORSCHEMES**
 
 - [everforest](https://github.com/neanias/everforest-nvim)
 - [koda](https://github.com/oskarnurm/koda.nvim)
 - [vague](https://github.com/vague-theme/vague.nvim)
+
+**OTHER**
+
+- [waybar CAVA](https://github.com/ray-pH/waybar-cava)
+    This is a script that puts cava into waybar! (requires cava)
 
 # SCRIPT
 
