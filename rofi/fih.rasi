@@ -1,22 +1,16 @@
 * {
-  // COLORS FROM NEOVIM VAGUE COLORSCHEME
-  // https://github.com/vague-theme/vague.nvim
   display-drun: rgba ( 196, 130, 130, 100 % );
   accent:       rgba ( 174, 174, 209, 100% );
   border:       rgba ( 28, 28, 36, 100% );
   text:         rgba ( 205, 205, 205, 100% );
   bg:           rgba ( 20, 20, 21, 100% );
 
-  // COLORS FROM NEOVIM EVERFOREST COLORSCHEME
-  // https://github.com/neanias/everforest-nvim
   everforest-display-drun: rgba ( 127, 187, 179, 100 % );
   everforest-accent:       rgba ( 167, 192, 128, 100% );
   everforest-border:       rgba ( 39, 46, 51, 100% );
   everforest-text:         rgba ( 211, 198, 170, 100% );
   everforest-bg:           rgba ( 30, 35, 38, 100% );
 
-  // COLORS FROM NEOVIM KODA COLORSCHEME
-  // https://github.com/oskarnurm/koda.nvim
   koda-display-drun: rgba ( 142, 190, 236, 100 % );
   koda-accent:       rgba ( 217, 186, 115, 100% );
   koda-border:       rgba ( 39, 39, 39, 100% );

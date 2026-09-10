@@ -25,13 +25,15 @@ do
     continue
   fi
 
-  if [ $config = ".bashrc" ] || [ $config = "walls" ]; then
+  if [ $config = "bashrc" ]; then
+    dst="$HOME/.bashrc"
+  elif [ $config = "walls" ]; then
     dst="$HOME/$config"
   else
     dst="$HOME/.config/$config"
   fi
 
-  if [ -d $dst ]; then
+  if [ -d $dst ] || [ -f $dst ]; then
     rm -rf $dst
   fi
 

@@ -1,18 +1,18 @@
 # COLORS
 # ----------
-# EVERFOREST: https://github.com/neanias/everforest-nvim
+# EVERFOREST
 # text-color: #d3c6aa
 # bg-color: #1e2326
 # border-color: #a7c080
 # border-color-critical: #e67e80
 # ----------
-# KODA: https://github.com/oskarnurm/koda.nvim
+# KODA
 # text-color: #b0b0b0
 # bg-color: #101010
 # border-color: #d9ba73
 # border-color-critical: #701516
 # ----------
-# VAGUE: https://github.com/vague-theme/vague.nvim
+# VAGUE
 # text-color: #cdcdcd
 # bg-color: #141415
 # border-color: #b4d4cf

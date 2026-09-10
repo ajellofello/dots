@@ -1,5 +1,10 @@
 #! /bin/bash
 
+# I DID NOT MAKE THIS SCRIPT
+# I GOT THIS SCRIPT FROM THE INTERNET
+# HERE IS THE AUTHOER'S REPO
+# https://github.com/ray-pH/waybar-cava
+
 bar="▁▂▃▄▅▆▇█"
 dict="s/;//g;"
 
