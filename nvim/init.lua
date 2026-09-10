@@ -7,6 +7,11 @@ vim.pack.add({
   { src = gh("nvim-treesitter/nvim-treesitter"), version = "main" },
 })
 
+require("vague").setup({
+  italic = false,
+  bold = false,
+})
+
 require("everforest").setup({
   background = "hard",
   italics = false,
