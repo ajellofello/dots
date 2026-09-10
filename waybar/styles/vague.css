@@ -1,0 +1,55 @@
+/* COLORS FROM NEOVIM VAGUE COLORSCHEME
+ * https://github.com/vague-theme/vague.nvim
+ */
+
+* {
+  font-family: "Agave Nerd Font";
+  font-weight: bold;
+  font-size: 15px;
+}
+
+window#waybar {
+	background-color: #141415;
+  border-top: 1px solid #1c1c24;
+}
+
+/* Workspace */
+#workspaces button {
+  padding-left: 10px;
+  padding-right: 10px;
+	color: #cdcdcd;
+}
+
+#workspaces button.focused,
+#workspaces button.active {
+	background-color: #aeaed1;
+  border: 1px solid #aeaed1;
+  border-radius: 0px;
+	color: #141415;
+}
+
+/* CAVA */
+#custom-cava {
+	color: #aeaed1;
+}
+
+/* CLOCK */
+#clock {
+	color: #cdcdcd;
+}
+
+/* FONT COLOR */
+#network,
+#pulseaudio,
+#bluetooth,
+#battery {
+	color: #cdcdcd;
+}
+
+#battery {
+  margin-right: 15px
+}
+
+#bluetooth {
+  font-size: 17px;
+}
