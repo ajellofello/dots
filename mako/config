@@ -1,27 +1,33 @@
 # COLORS
 # ----------
-# EVERFOREST
+# EVERFOREST: https://github.com/neanias/everforest-nvim
 # text-color: #d3c6aa
 # bg-color: #1e2326
 # border-color: #a7c080
 # border-color-critical: #e67e80
 # ----------
-# KODA
+# KODA: https://github.com/oskarnurm/koda.nvim
 # text-color: #b0b0b0
 # bg-color: #101010
 # border-color: #d9ba73
 # border-color-critical: #701516
+# ----------
+# VAGUE: https://github.com/vague-theme/vague.nvim
+# text-color: #cdcdcd
+# bg-color: #141415
+# border-color: #b4d4cf
+# border-color-critical: #c48282
 
-font=Agave Nerd Font 13
+font=Iosevka Nerd Font 13
 default-timeout=3000
 ignore-timeout=1
 width=250
 height=50
 outer-margin=10
 
-text-color=#d3c6aa
-background-color=#1e2326
-border-color=#a7c080
+text-color=#cdcdcd
+background-color=#141415
+border-color=#b4d4cf
 
 padding=10
 border-size=2
@@ -31,7 +37,7 @@ format=<b>%s</b>
 
 [urgency="critical"]
 default-timeout=5000
-border-color=#e67e80
+border-color=#c48282
 
 [urgency="low"]
 invisible=1
