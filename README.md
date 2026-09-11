@@ -11,6 +11,25 @@ I changed my mind.
 
 **Basically do as you wish! My dots are yours!**
 
+# DEPENDENCIES
+
+This section talks about things that should be installed for _everything_
+to work.
+
+These are the packages:
+
+```
+hyprland hypridle hyprlock hyprpicker waybar rofi neovim mako kitty bash fastfetch cava libnotify playerctl brightnessctl cowsay
+```
+
+**OPTIONAL DEPENDENCIES**
+
+- `cava`: to show cava in waybar
+- `playerctl`: has audio controls if you click on the `cava` module in waybar
+    and decreases and increases the volume with laptop function keys
+- `brightnessctl`: to decrease and increase the brightness with laptop function keys
+- `libnotify`: will send a notification when you battery is low or full
+
 # LINKS
 
 This section has the links for different things in this repo that _I
@@ -48,6 +67,6 @@ as it `rm -rf`s _**ALL**_ of the destinations before creating new symlinks.
 
 # NOTES
 
-Right now the all configs use [Iosevka Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.1/Iosevka.zip), so
+Right now all configs use [Iosevka Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.1/Iosevka.zip), so
 if the fonts are broken, just make sure you have this installed ;)
 

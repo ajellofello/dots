@@ -13,7 +13,7 @@ configs=$(ls -a)
 linked_configs=0
 
 if [ ! -d $dots ]; then
-  echo $dots doesn\'t exist. PLS clone the repo or smt 1>&2
+  echo $dots doesn\'t exist. PLS clone the repo or put it into the expected location 1>&2
   exit 1
 fi
 
@@ -21,7 +21,7 @@ for config in ${configs[@]}
 do
   src="$dots/$config"
 
-  if [ $config = "." ] || [ $config = ".." ] || [ $config = ".git" ] || [ $config = "link.sh" ]; then
+  if [ $config = "." ] || [ $config = ".." ] || [ $config = ".git" ] || [ $config = "link.sh" ]; || [ $config = "README.md" ] then
     continue
   fi
 
