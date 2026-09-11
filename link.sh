@@ -21,7 +21,7 @@ for config in ${configs[@]}
 do
   src="$dots/$config"
 
-  if [ $config = "." ] || [ $config = ".." ] || [ $config = ".git" ] || [ $config = "link.sh" ]; || [ $config = "README.md" ] then
+  if [ $config = "." ] || [ $config = ".." ] || [ $config = ".git" ] || [ $config = "link.sh" ] || [ $config = "README.md" ]; then
     continue
   fi
 
@@ -29,6 +29,11 @@ do
     dst="$HOME/.bashrc"
   elif [ $config = "walls" ]; then
     dst="$HOME/$config"
+  elif [ $config = "spicetify" ]; then
+    # I am only keeping my theme configuration for spicetify and nothing
+    # else so I have to change both the src and dst
+    src="$HOME/dots/spicetify/Themes"
+    dst="$HOME/.config/spicetify/Themes"
   else
     dst="$HOME/.config/$config"
   fi
