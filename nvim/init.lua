@@ -13,6 +13,7 @@ require("vague").setup({
   on_highlights = function(hl, colors)
     hl["@markup.heading.1"] = { fg = "#c48282" }
     hl["@markup.heading.2"] = { fg = "#b4d4cf" }
+    hl["@constant.builtin"] = { fg = "#bb9dbd" }
   end
 })
 

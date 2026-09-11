@@ -11,25 +11,39 @@ reset="\e[0m"
 dots="$HOME/dots"
 configs=$(ls -a)
 linked_configs=0
+ignore=("." ".." ".git" "link.sh" "README.md" ".gitignore")
 
 if [ ! -d $dots ]; then
   echo $dots doesn\'t exist. PLS clone the repo or put it into the expected location 1>&2
   exit 1
 fi
 
+should_ignore() {
+  config=$1
+
+  for ignored in ${ignore[@]}
+  do
+    if [ $config = $ignored ]; then
+      return 0
+    fi
+  done
+
+  return 1
+}
+
 for config in ${configs[@]}
 do
-  src="$dots/$config"
-
-  if [ $config = "." ] || [ $config = ".." ] || [ $config = ".git" ] || [ $config = "link.sh" ] || [ $config = "README.md" ]; then
+  if should_ignore $config; then
     continue
   fi
 
-  if [ $config = "bashrc" ]; then
+  src="$dots/$config"
+
+  if [[ $config = "bashrc" ]]; then
     dst="$HOME/.bashrc"
-  elif [ $config = "walls" ]; then
+  elif [[ $config = "walls" ]]; then
     dst="$HOME/$config"
-  elif [ $config = "spicetify" ]; then
+  elif [[ $config = "spicetify" ]]; then
     # I am only keeping my theme configuration for spicetify and nothing
     # else so I have to change both the src and dst
     src="$HOME/dots/spicetify/Themes"
@@ -38,7 +52,7 @@ do
     dst="$HOME/.config/$config"
   fi
 
-  if [ -d $dst ] || [ -f $dst ]; then
+  if [[ -d $dst ]] || [[ -f $dst ]]; then
     rm -rf $dst
   fi
 
