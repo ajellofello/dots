@@ -37,7 +37,7 @@ prompt_command() {
   fi
 
   # set shell
-  export PS1="$cmdstat $branch{ $blue\W$reset } "
+  export PS1="$cmdstat $branch{ $cyan\W$reset } "
 }
 
 export PROMPT_COMMAND=prompt_command
