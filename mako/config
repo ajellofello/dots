@@ -15,7 +15,7 @@
 # VAGUE
 # text-color: #cdcdcd
 # bg-color: #141415
-# border-color: #b4d4cf
+# border-color: #aeaed1
 # border-color-critical: #c48282
 
 font=Iosevka Nerd Font 13
@@ -27,7 +27,7 @@ outer-margin=10
 
 text-color=#cdcdcd
 background-color=#141415
-border-color=#b4d4cf
+border-color=#aeaed1
 
 padding=10
 border-size=2

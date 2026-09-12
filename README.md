@@ -62,6 +62,9 @@ all configurations will be symlinked to `$HOME/.config/<config>` except for:
 
 Those will be symlinked to `$HOME/<config>`.
 
+**NOTE:** the script exepects the repo (src) to be stored in $HOME/dev/dots if you
+want it to be somewhere else, please feel free to change it in the script.
+
 **IMPORTANT:** please, backup all of your configurations before running the script
 as it `rm -rf`s _**ALL**_ of the destinations before creating new symlinks.
 

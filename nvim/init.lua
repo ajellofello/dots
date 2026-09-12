@@ -11,9 +11,11 @@ require("vague").setup({
   italic = false,
   bold = false,
   on_highlights = function(hl, colors)
-    hl["@markup.heading.1"] = { fg = "#c48282" }
-    hl["@markup.heading.2"] = { fg = "#b4d4cf" }
+    hl["@markup.heading.1"] = { fg = "#c48282", bold = true }
+    hl["@markup.heading.2"] = { fg = "#b4d4cf", bold = true  }
     hl["@constant.builtin"] = { fg = "#bb9dbd" }
+    hl["makeStatement"]     = { fg = "#c48282" }
+    hl["@function.macro.c"] = { fg = "#bb9dbd" }
   end
 })
 

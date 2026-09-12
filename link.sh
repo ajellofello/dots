@@ -8,7 +8,7 @@ emphasis="\e[0;33m"
 success="\e[0;34m"
 reset="\e[0m"
 
-dots="$HOME/dots"
+dots="$HOME/dev/dots"
 configs=$(ls -a)
 linked_configs=0
 ignore=("." ".." ".git" "link.sh" "README.md" ".gitignore")
