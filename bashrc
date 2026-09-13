@@ -24,9 +24,9 @@ white="\[\e[0;37m\]"
 prompt_command() {
   # set command status
   if [ "$?" == 0 ]; then
-    cmdstat="$white&$reset"
+    cmdstat="$cyan\$$reset"
   else
-    cmdstat="$red&$reset"
+    cmdstat="$red\$$reset"
   fi
 
   # get git branch
